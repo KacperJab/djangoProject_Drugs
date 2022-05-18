@@ -10,3 +10,4 @@ requests==2.23.0
 sqlparse==0.3.1
 djangorestframework
 whitenoise==6.1.0
+dj-database-url==0.5.0
