@@ -60,13 +60,14 @@ def load_initial_data(request):
     print("load_initial_data")
     query = ""
     if request.method == 'GET':
-        query_result = Lek.objects.all().order_by('pk')[start_index:offset]
+        # query_result = Lek.objects.all().order_by('pk')[start_index:offset]
+        query_result = Lek.objects.all()
         serialized_query = LekSerializer(query_result, many='True').data
         context = {  # create context for JSON response
             'query': query,
             'query_result': serialized_query
         }
-        print("REURNED LOAD INITIAL DATA")
+        print("RETURNED LOAD INITIAL DATA")
         print(serialized_query)
         return JsonResponse(context, safe=False)
 
