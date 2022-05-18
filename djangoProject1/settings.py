@@ -10,11 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os.path
+import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -26,7 +26,6 @@ SECRET_KEY = 'django-insecure-3fy&yvwylzf-=*n!70+4thlk+te4%qc*bw3=o(ty=q)x028rcq
 DEBUG = True
 
 ALLOWED_HOSTS = ['vast-chamber-20989.herokuapp.com', '127.0.0.1']
-
 
 # Application definition
 
@@ -72,7 +71,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'djangoProject1.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
@@ -90,15 +88,15 @@ WSGI_APPLICATION = 'djangoProject1.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'lyehdhzy',
-        'USER': 'lyehdhzy',
+        'NAME': 'databaseio',
+        'USER': 'kacperjablonski',
+        'PORT': 5432,
         'PASSWORD': 'gqa5yCA7pqGXZqqdDbwqknfzTbx7o8hq',
-        'HOST': 'tyke.db.elephantsql.com'
+        'HOST': 'databaseio.c7rvp2aecryc.us-east-1.rds.amazonaws.com'
     }
 }
 
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=600)
+db_from_env = dj_database_url.config('postgres://lyehdhzy:gqa5yCA7pqGXZqqdDbwqknfzTbx7o8hq@tyke.db.elephantsql.com/lyehdhzy', conn_max_age=600)
 DATABASES['default'].update(db_from_env)
 
 # Password validation
@@ -119,7 +117,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
@@ -130,7 +127,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
