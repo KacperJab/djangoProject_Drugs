@@ -76,14 +76,24 @@ WSGI_APPLICATION = 'djangoProject1.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'dcru55cvn1dnsu',
+#         'USER': 'apvelptqdoowyh',
+#         'PORT': 5432,
+#         'PASSWORD': '4b42e46ac689729b74a50362767bcb3f8e628124677be38d3717bfa6fecb5030',
+#         'HOST': 'ec2-54-165-184-219.compute-1.amazonaws.com'
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dcru55cvn1dnsu',
-        'USER': 'apvelptqdoowyh',
-        'PORT': 5432,
-        'PASSWORD': '4b42e46ac689729b74a50362767bcb3f8e628124677be38d3717bfa6fecb5030',
-        'HOST': 'ec2-54-165-184-219.compute-1.amazonaws.com'
+        'NAME': 'lyehdhzy',
+        'USER': 'lyehdhzy',
+        'PASSWORD': 'gqa5yCA7pqGXZqqdDbwqknfzTbx7o8hq',
+        'HOST': 'tyke.db.elephantsql.com'
     }
 }
 
