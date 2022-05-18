@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'IO_DrugSearch.apps.IoDrugsearchConfig',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -86,13 +87,16 @@ WSGI_APPLICATION = 'djangoProject1.wsgi.application'
 
 DATABASES = {
     'default': {
-
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd1mabhqd0b8tbc',
+        'USER': 'ayymhjgfbdfznv',
+        'PASSWORD': 'a57d9ecdce98221154ce2bd80ea1d1ca09f9e0b7b427ccf095db4df3122ef5a4',
+        'HOST': 'ec2-44-195-169-163.compute-1.amazonaws.com'
     }
 }
 
 db_from_enf = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_enf)
-DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql'
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -132,5 +136,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
