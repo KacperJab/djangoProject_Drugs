@@ -96,13 +96,19 @@ WSGI_APPLICATION = 'djangoProject1.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'lyehdhzy',
+#         'USER': 'lyehdhzy',
+#         'PASSWORD': 'gqa5yCA7pqGXZqqdDbwqknfzTbx7o8hq',
+#         'HOST': 'tyke.db.elephantsql.com'
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'lyehdhzy',
-        'USER': 'lyehdhzy',
-        'PASSWORD': 'gqa5yCA7pqGXZqqdDbwqknfzTbx7o8hq',
-        'HOST': 'tyke.db.elephantsql.com'
+
     }
 }
 
@@ -147,3 +153,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
