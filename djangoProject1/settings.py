@@ -96,21 +96,18 @@ WSGI_APPLICATION = 'djangoProject1.wsgi.application'
 #     }
 # }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'lyehdhzy',
-#         'USER': 'lyehdhzy',
-#         'PASSWORD': 'gqa5yCA7pqGXZqqdDbwqknfzTbx7o8hq',
-#         'HOST': 'tyke.db.elephantsql.com'
-#     }
-# }
-
-DATABASES = {'default': dj_database_url.config('postgres://lyehdhzy:gqa5yCA7pqGXZqqdDbwqknfzTbx7o8hq@tyke.db.elephantsql.com/lyehdhzy', conn_max_age=600, ssl_require=True)}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'lyehdhzy',
+        'USER': 'lyehdhzy',
+        'PASSWORD': 'gqa5yCA7pqGXZqqdDbwqknfzTbx7o8hq',
+        'HOST': 'tyke.db.elephantsql.com'
+    }
+}
 
 # db_from_env = dj_database_url.config('postgres://hbgiywwfwinffj:802f8b1f72395bef109f9e41b544a9f825e3956490e7f8c382f6eb19e33bb6ea@ec2-44-195-169-163.compute-1.amazonaws.com:5432/db9gd4f7edvj6d', conn_max_age=600)
 # DATABASES['default'].update(db_from_env)
-DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql'
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
