@@ -62,6 +62,7 @@ def load_initial_data(request):
     if request.method == 'GET':
         # query_result = Lek.objects.all().order_by('pk')[start_index:offset]
         query_result = Lek.objects.all()
+        print(query_result)
         serialized_query = LekSerializer(query_result, many='True').data
         context = {  # create context for JSON response
             'query': query,
