@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'IO_DrugSearch.apps.IoDrugsearchConfig',
-    'django_extensions',
 ]
 
 MIDDLEWARE = [
