@@ -67,6 +67,7 @@ def load_initial_data(request):
             'query_result': serialized_query
         }
         print("REURNED LOAD INITIAL DATA")
+        print(serialized_query)
         return JsonResponse(context, safe=False)
 
 
